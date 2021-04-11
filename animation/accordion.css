@@ -1,0 +1,140 @@
+.container{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	direction: rtl;
+	background: #eaeaea;
+}
+.addrow{
+	padding: 35px 0;
+}
+
+.questionId{
+
+	height: 100%; 
+	background: #bfbfbf;
+}
+.questionId>span{
+	background-color: #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 47px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.gap{
+	/* padding: 3px 0; */
+	margin:0 15px;
+	margin-bottom: 1px;
+}
+.questionWrapper{
+	background: #a0a0a0;
+	display:none;
+}
+
+/* .showHideQ{	
+	display: flex;	
+} */
+
+.addMinus{
+	content: "-";
+}
+.textareaHeader{
+	text-align: right !important;
+	line-height: 65px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.mr-top .textarea{	
+	width:100%;
+	box-sizing:border-box;
+	direction:rtl;
+	display:block;
+	max-width:100%;
+	line-height:1.5;
+	padding:15px 15px 30px;
+	border-radius:3px;
+	border:1px solid #F7E98D;
+	font:14px Tahoma, cursive;
+	font-weight: bold;
+	transition:box-shadow 0.5s ease;
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	font-smoothing:subpixel-antialiased;
+	background:linear-gradient(#F9EFAF, #F7E98D);
+	background:-o-linear-gradient(#F9EFAF, #F7E98D);
+	background:-ms-linear-gradient(#F9EFAF, #F7E98D);
+	background:-moz-linear-gradient(#F9EFAF, #F7E98D);
+	background:-webkit-linear-gradient(#F9EFAF, #F7E98D);
+}
+
+.btnEdit{
+	margin-left: 10px;
+}
+.mr-top{
+	margin-top: 20px;
+}
+.optionTitle{
+	font-size: 15px;
+    font-weight: bold;
+    line-height: 28px
+}
+.mr-top input[type=text]{
+	width: 80%;
+}
+
+.Qcaption{
+	background: brown;
+    font-size: 30px; 
+    /* padding-right: 30px;
+    padding-left: 30px; */
+    color: #fff;
+	font-weight: bold;	
+}
+.dflex{
+	display: flex !important;
+}
+
+@media (max-width: 575px) { 
+	.optionTitle input[type=text]{
+		width: 100%;
+	}
+
+	.questionId{
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 991px) { 
+
+	.sm-mod-mr-bottom{
+		margin-bottom: 15px;;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.container > div:first-child{
+	margin-top: 100px;
+}*/

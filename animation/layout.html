@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+	.grid > * {
+      padding: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #efefef;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    nav { 
+      grid-area: nav;
+      background-color: #ccc;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #ccc;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #efefef;
+    }
+
+    .grid {
+      margin: 20px auto 0 auto;
+      max-width: 960px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+     "header  header  header  header  header"
+     "nav     nav     nav     nav     nav"
+     "content content content content content"
+     "sidebar sidebar sidebar sidebar sidebar"
+     "footer footer  footer  footer  footer"
+      ;
+
+    }
+
+    @media (min-width: 550px) {
+      .grid {
+        grid-template-areas:
+     "header header  header  header  header "
+     "nav    content content content sidebar"
+     "footer footer  footer  footer  footer"
+      ;
+      }
+    }
+</style>
+<body>
+	  <div class="grid">
+    <header><h1>This is CSS Grid Layout!</h1></header>
+
+    <div class="content">
+
+      <p>Grid Layout gives us a method of creating structures that are not unlike using “tables for layout”. However, being described in CSS and not in HTML they allow us to create layouts that can be redefined using Media Queries and adapt to different contexts.</p>
+
+      <p>Grid Layout lets us properly separate the order of elements in the source from their visual presentation. As a designer this means you are free to change the location of page elements as is best for your layout at different breakpoints and not need to compromise a sensible structred document for your responsive design.</p>
+
+      <p>It’s very easy to make grid adapt to the available space. With each element having an area on the grid, things are not in risk of overlapping due to text size change, more content than expected or small viewports.</p>
+
+      <p>Unlike with an HTML table-based layout, you can layer items on the grid. So one item can overlap another if required.</p>
+
+
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="http://www.w3.org/TR/css-grid-1">CSS Grid Spec</a></li>
+        <li><a href="http://drafts.csswg.org/css-grid/">CSS Grid latest Editor's Draft</a></li>
+        <li><a href="http://gridbyexample.com">Grid by Example</a></li>
+        <li><a href="https://igalia.github.io/css-grid-layout/">Examples from Igalia</a></li>
+      </ul>
+
+    </nav>
+
+    <aside>
+      <p>CSS Grid Layout is coming soon! Take a look at the examples using <a href="http://gridbyexample.com/browsers/">a supporting browser</a>.</p>
+    </aside>
+
+    <footer>
+      <p>Talk to me about Grid on <a href="https://twitter.com/rachelandrew">Twitter</a>!</p>
+    </footer>
+  </div>
+
+</body>
+</html>

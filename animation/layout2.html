@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+main {
+  display: grid;
+  
+  // one column layout by default for small screens
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(1fr, 500px);
+  
+  // when wider than my small breakpoint, grow into multi-column layout
+  @include bp(small) {
+    // use repeat(# of times, measurement) instead of declaring same value X times
+    // replaces grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+// override the default grid-template-columns and rows
+.heading {
+  grid-row: span 3;
+}
+
+.intro {
+  grid-row: span 2;
+  
+  @include bp(small) {
+    grid-column: span 3;
+  }
+}
+
+
+// Styles for fun
+// -------------------------------------------------
+
+@import 'https://fonts.googleapis.com/css?family=Comfortaa:300,700|Bungee+Shade|Josefin+Sans:400';
+
+$color-1: rgb(119, 156, 7);
+$color-2: adjust-hue($color-1, 120%);
+// Amount of steps to iterate through color mix
+$steps: 9;
+
+// Mix colors to go from $color-1 ro @color-2 with 9 total steps
+@for $i from 0 to $steps {
+  div:nth-of-type(#{$i + 1}) {
+    background: mix($color-1, $color-2, percentage($i / ($steps - 1)));
+  }
+}
+
+body {
+  background: #424242;
+  color: #fff;
+  font-family: Comfortaa, sans-serif;
+  font-weight: 300;
+  letter-spacing: .03rem;
+  line-height: 1;
+  margin: 0 auto; 
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+div {
+  color: #fff;
+  padding: .85rem;
+
+  @include bp(small) {
+    padding: 2rem;  
+  }
+}
+
+h2 {
+  font-size: 2.0rem;
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.demo-number {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3.5rem;
+}
+
+a {
+  color: rgb(19, 56, 117);
+}
+  
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+</style>
+<body>
+<main>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div class="heading">5
+      <h1>CSS Grid Layout</h1>
+    <p>Using grid-template-columns: repeat();</p>
+      <h2>demo <span class="demo-number">6</span></h2>
+  </div>
+  <div class="intro">6
+    <!-- CSS Grid Layout browser support text -->
+[[[https://codepen.io/stacy/pen/f1639a51a21481925379ac4580c6fe2e/]]]
+  </div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+</main>
+
+
+<!-- Support Message -->
+[[[https://codepen.io/stacy/pen/NbvaNY]]]
+</body>
+</html>

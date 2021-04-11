@@ -1,0 +1,107 @@
+body {
+    float: right;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ded6f8;
+}
+
+body .content {
+    float: right;
+    width: 1200px;
+    height: 740px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+body .content .menu {
+    background-color: #f6f4fd;
+    width: 265px;
+    height: 100%;
+}
+
+body .content .menu ul {
+    background-color: #5840ba;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+}
+
+body .content .menu ul li {
+    border-radius: 50px 0 0 50px;
+    padding-left: 20px;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+body .content .menu ul li.active .icon {
+    background-color: #252525c4;
+}
+
+body .content .menu ul li.active .text {
+    background-color: #252525c4;
+}
+
+body .content .menu ul li .icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff63;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+body .content .menu ul li .text {
+    width: 100px;
+    height: 4px;
+    background-color: #ffffff63;
+    margin-top: 13px;
+    transition: 1s;
+}
+
+body .content .main {
+    width: calc(100% - 265px);
+    background-color: #f6f4fd;
+}
+
+body .content .main > div {
+    background-color: #f6f4fd;
+    height: 100%;
+    position: relative;
+    filter: url("#goo");
+    -webkit-filter: url("#goo");
+}
+
+body .content .main > div .activator {
+    position: absolute;
+    width: 238px;
+    height: 60px;
+    left: -236px;
+    background-color: #f6f4fd;
+    top: 42px;
+    border-radius: 50px 0 0 50px;
+    transition: 0.4s;
+}
+
+body .content .main > div > div.search {
+    height: 36px;
+}
+
+body .content .main > div > div.gadget {
+    height: 120px;
+}
+
+body .content .main > div > div.chart {
+    height: 180px;
+}
+
+body .content .main > div > div.data {
+    height: 280px;
+}
+
+body .content .main > div > div div {
+    background-color: #fff;
+    height: 100%;
+    border-radius: 20px;
+}

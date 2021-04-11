@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<style type="text/css">
+		.wb{
+			width: 50%;
+			height: 100px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+			background-color: #ccc;
+		}
+		.b{
+			text-align: center;
+			line-height: 5;
+			padding: 0 45px;
+			color: #fff;
+		}
+		.
+	</style>
+</head>
+<body>
+	<div class="m">
+		<!-- <div class="wb"><div class="b">01</div></div>
+		<div class="wb"><div class="b">01</div></div>
+		<div class="wb"><div class="b">01</div></div> -->
+	</div>
+	<script type="text/javascript">
+		var i=1;
+		var max=5;
+		$(window).on("load",function () {
+			$(".m").html('');
+			for (var i = 1; i<=max; i++) {
+				$(".m").prepend($("<div class=\"wb\"><div class=\"b\">"+i+"</div></div>"));
+			}
+			
+		})
+	</script>
+</body>
+</html>

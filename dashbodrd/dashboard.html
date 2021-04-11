@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashbord</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="dashboard.css">
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<svg id="svg" style="display: none">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0 0 0 0 19 -9" result="goo" />
+					<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+				</filter>
+			</defs>
+
+		</svg>
+		<section class="content shadow">
+			<div class="menu float-left">
+				<ul class="list-unstyled pl-4 pt-5 float-left w-100  m-0">
+					<li class="float-right w-100 py-2 active">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+					<li class="float-right w-100 py-2 mt-3">
+						<span class="icon float-left"></span>
+						<span class="text float-left ml-3"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="main float-right h-100">
+				<div class="float-right w-100 p-4 h-100">
+					<span class="activator"></span>
+					<div class="search col-12 float-left">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="gadget col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="gadget col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="gadget col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="gadget col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="chart col-6 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="chart col-6 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="data col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="data col-3 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+					<div class="data col-6 float-left mt-4">
+						<div class="float-left w-100 shadow"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="dashboard.js"></script>
+</body>
+</html>
